@@ -1,0 +1,133 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0;
+
+    &__logo {
+        @include effects;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        column-gap: 32px;
+        flex-basis: 55%;
+
+        &-link {
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 25px;
+            font-family: $font-space-mono;
+            font-weight: 700;
+            color: $main-subtext-color;
+            transition: 0.5s linear;
+
+            &:hover {
+                color: $main-orange-color;
+            }
+        }
+    }
+
+    &__btn {
+        @include main-btn;
+        transition: 0.5s linear;
+
+        &:hover {
+            background-color: #fff;
+            color: $main-orange-color;
+            border: 3px solid $main-orange-color;
+            transform: scale(1.05);
+        }
+
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+
+    &__checkbox {
+        display: none;
+
+        &:checked ~ .navbar__menu,
+        &:checked ~ .navbar__btn {
+            transform: translateX(0);
+            visibility: visible;
+        }
+
+        &:checked ~ .navbar__open {
+            display: none;
+        }
+
+        &:checked ~ .navbar__close {
+            display: block;
+        }
+    }
+
+    &__open,
+    &__close {
+        font-size: 20px;
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        position: relative;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        &__menu {
+            flex-basis: 0%;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        &__logo {
+            margin: 0 auto;
+        }
+
+        &__open {
+            display: block;
+        }
+
+        &__menu {
+            width: 256px;
+            height: 100vh;
+            padding: 64px 32px;
+            background-color: #333a44;
+            position: fixed;
+            z-index: 2;
+            top: 18%;
+            left: 0;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 24px;
+            transition: 0.5s linear;
+            transform: translateX(-120%);
+            visibility: hidden;
+
+            &-link {
+                font-size: 18px;
+                color: #e5ecf4;
+
+                &:hover {
+                    color: $main-orange-color;
+                }
+            }
+        }
+
+        &__btn {
+            position: fixed;
+            bottom: 24px;
+            left: 32px;
+            z-index: 2;
+            transition: 0.5s linear;
+            transform: translateX(-190%);
+            visibility: hidden;
+        }
+    }
+}
