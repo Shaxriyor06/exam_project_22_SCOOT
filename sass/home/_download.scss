@@ -1,0 +1,115 @@
+.download {
+    margin-top: 200px;
+    padding: 102px 0;
+    background-color: #495567;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        &-mask {
+            position: absolute;
+            bottom: -110px;
+            right: -240px;
+        }
+
+        &-text {
+            max-width: 435px;
+            font-size: 48px;
+            line-height: 48px;
+            font-family: $font-space-mono;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 2.14px;
+        }
+
+        &-source {
+            display: flex;
+            align-items: center;
+            column-gap: 18px;
+
+            &-btn {
+                border-radius: 8px;
+                background-color: #e5ecf4;
+                padding: 8px 15px;
+                border: 1px solid transparent;
+                display: flex;
+                align-items: center;
+                column-gap: 12px;
+                cursor: pointer;
+                @include effects;
+
+                & i {
+                    font-size: 25px;
+                    color: #485567;
+                }
+
+                & p {
+                    font-size: 10px;
+                    line-height: 14.81px;
+                    font-family: $font-space-mono;
+                    font-weight: 700;
+                    color: #495567;
+                    letter-spacing: 0.45px;
+                }
+
+                & h5 {
+                    font-size: 20px;
+                    line-height: 24px;
+                    font-family: $font-space-mono;
+                    font-weight: 700;
+                    color: #495567;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .download {
+        margin: 104px 0 0 0;
+        padding: 62px 0;
+
+        &__content {
+            flex-direction: column;
+            row-gap: 40px;
+            justify-content: center;
+            text-align: center;
+
+            &-mask {
+                left: -400px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .download {
+        margin: 120px 0 0 0;
+        padding: 88px 32px;
+
+        &__content {
+            &-text {
+                max-width: 311px;
+                font-size: 32px;
+                line-height: 32px;
+                letter-spacing: 1.43px;
+            }
+
+            &-mask {
+                left: -140px;
+
+                & img {
+                    max-width: 740px;
+                }
+            }
+
+            &-source {
+                flex-direction: column;
+                row-gap: 25px;
+            }
+        }
+    }
+}
