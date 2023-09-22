@@ -31,18 +31,6 @@
 
     &__btn {
         @include main-btn;
-        transition: 0.5s linear;
-
-        &:hover {
-            background-color: #fff;
-            color: $main-orange-color;
-            border: 3px solid $main-orange-color;
-            transform: scale(1.05);
-        }
-
-        &:active {
-            transform: scale(0.9);
-        }
     }
 
     &__checkbox {
@@ -121,7 +109,6 @@
         }
 
         &__btn {
-            padding: 14px 20px;
             position: fixed;
             bottom: 15%;
             left: 32px;
