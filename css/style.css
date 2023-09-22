@@ -69,7 +69,6 @@ nav {
 }
 .navbar__btn {
   background-color: #fcb72b;
-  width: 180px;
   height: 53px;
   padding: 14px 25px;
   border-radius: 4px;
@@ -194,7 +193,6 @@ nav {
 }
 .hero__content-btn {
   background-color: #fcb72b;
-  width: 180px;
   height: 53px;
   padding: 14px 25px;
   border-radius: 4px;
@@ -454,7 +452,6 @@ nav {
 }
 .about__content-text-btn {
   background-color: #fcb72b;
-  width: 180px;
   height: 53px;
   padding: 14px 25px;
   border-radius: 4px;
