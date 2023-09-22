@@ -1,0 +1,153 @@
+.about {
+    position: relative;
+
+    &__content {
+        margin-top: 155px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-image {
+            position: relative;
+
+            &-arrow-first,
+            &-arrow-second,
+            &-arrow-third {
+                position: absolute;
+            }
+
+            &-arrow-first {
+                right: -220px;
+                bottom: 0;
+                z-index: 2;
+            }
+
+            &-arrow-second {
+                top: 0;
+                left: -200px;
+            }
+
+            &-arrow-third {
+                top: 15%;
+                right: -200px;
+            }
+
+            &-main {
+                border-radius: 50%;
+            }
+
+            &-mask {
+                position: absolute;
+                right: -200px;
+
+                &--reverse {
+                    left: -200px;
+                }
+            }
+        }
+
+        &-text {
+            max-width: 445px;
+
+            &-title {
+                @include h2-titles;
+            }
+
+            &-subtitle {
+                @include p-subtitles;
+                margin: 24px 0 40px 0;
+            }
+
+            &-btn {
+                @include main-btn;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .about {
+        &__content {
+            flex-direction: column-reverse;
+            row-gap: 64px;
+            justify-content: center;
+            text-align: center;
+
+            &--reverse {
+                flex-direction: column;
+            }
+
+            &-image {
+                &-mask {
+                    right: -240px;
+
+                    &--reverse {
+                        left: -240px;
+                    }
+                }
+
+                &-arrow-third {
+                    right: -250px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 92px 0 104px 0;
+
+        &__content {
+            &-text {
+                &-title {
+                    font-size: 48px;
+                    line-height: 48px;
+                    letter-spacing: 2.14px;
+                }
+
+                &-subtitle {
+                    margin: 40px 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .about {
+        padding: 0 32px;
+
+        &__content {
+            &-text {
+                &-title {
+                    font-size: 32px;
+                    line-height: 32px;
+                    letter-spacing: 1.43px;
+                }
+
+                &-subtitle {
+                    margin: 32px 0;
+                }
+            }
+
+            &-image {
+                &-mask {
+                    display: none;
+                }
+
+                &-main {
+                    max-width: 311px;
+                }
+
+                &-arrow-first {
+                    left: -30px;
+                }
+
+                &-arrow-second {
+                    left: -140px;
+                }
+            }
+        }
+    }
+}
