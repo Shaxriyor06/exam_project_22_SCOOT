@@ -127,7 +127,7 @@ nav {
   }
   .navbar__menu {
     width: 256px;
-    height: 80vh;
+    height: 100vh;
     padding: 64px 32px;
     background-color: #333a44;
     position: fixed;
@@ -150,7 +150,7 @@ nav {
   }
   .navbar__btn {
     position: fixed;
-    bottom: 15%;
+    bottom: 5%;
     left: 32px;
     z-index: 4;
     transition: 0.5s linear;
